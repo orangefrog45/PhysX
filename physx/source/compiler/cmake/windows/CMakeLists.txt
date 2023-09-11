@@ -210,8 +210,6 @@ ELSE()
 		)
 
 ENDIF()
-SET(PHYSX_BIN_OUTPUT_DIR $<$<CONFIG:debug>:${PX_ROOT_LIB_DIR}/debug>$<$<CONFIG:release>:${PX_ROOT_LIB_DIR}/release>$<$<CONFIG:checked>:${PX_ROOT_LIB_DIR}/checked>$<$<CONFIG:profile>:${PX_ROOT_LIB_DIR}/profile>
-		) CACHE STRING "Physx bin dir")
 
 IF(PX_GENERATE_STATIC_LIBRARIES)
 	STRING(APPEND HEADER_CONTENT "#define PX_PHYSX_STATIC_LIB\n")
